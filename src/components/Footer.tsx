@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import dankoLogo from "@/assets/danko-logo.jpg";
 
 const Footer = () => {
   return (
@@ -7,14 +8,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-hero-gradient flex items-center justify-center">
-                <span className="text-primary-foreground font-serif font-bold text-lg">MD</span>
-              </div>
-              <div>
-                <h3 className="font-serif font-bold text-primary-foreground text-lg">Miroslav Danko</h3>
-                <p className="text-xs text-primary-foreground/60">Instalatérské práce</p>
-              </div>
+            <div className="mb-4">
+              <img 
+                src={dankoLogo} 
+                alt="Danko VTP" 
+                className="h-12 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               Spolehlivý instalatér s více než 30 lety zkušeností. Kvalita a spokojenost zákazníka na prvním místě.

@@ -1,4 +1,5 @@
-import { Phone, MapPin } from "lucide-react";
+import { Phone } from "lucide-react";
+import dankoLogo from "@/assets/danko-logo.jpg";
 
 const Header = () => {
   return (
@@ -6,15 +7,13 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-hero-gradient flex items-center justify-center shadow-md">
-              <span className="text-primary-foreground font-serif font-bold text-lg md:text-xl">MD</span>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="font-serif font-bold text-foreground text-lg md:text-xl">Miroslav Danko</h1>
-              <p className="text-xs text-muted-foreground">Instalatérské práce</p>
-            </div>
-          </div>
+          <a href="#" className="flex items-center">
+            <img 
+              src={dankoLogo} 
+              alt="Danko VTP - Instalatérské práce" 
+              className="h-10 md:h-14 w-auto"
+            />
+          </a>
 
           {/* Navigation - Desktop */}
           <nav className="hidden md:flex items-center gap-8">
