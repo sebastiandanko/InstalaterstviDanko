@@ -1,18 +1,20 @@
 import { Phone } from "lucide-react";
-import dankoLogo from "@/assets/danko-logo.jpg";
+import dankoLogo from "@/assets/danko-logo.png";
 
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+          {/* Logo in blue square */}
           <a href="#" className="flex items-center">
-            <img 
-              src={dankoLogo} 
-              alt="Danko VTP - Instalatérské práce" 
-              className="h-10 md:h-14 w-auto"
-            />
+            <div className="bg-primary rounded-lg p-2">
+              <img 
+                src={dankoLogo} 
+                alt="Danko VTP - Instalatérské práce" 
+                className="h-8 md:h-10 w-auto"
+              />
+            </div>
           </a>
 
           {/* Navigation - Desktop */}

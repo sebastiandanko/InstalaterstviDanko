@@ -1,5 +1,6 @@
 import { Award, Clock, ThumbsUp, Shield } from "lucide-react";
-import dankoLogo from "@/assets/danko-logo.jpg";
+import dankoLogo from "@/assets/danko-logo.png";
+import miroslavDanko from "@/assets/miroslav-danko.png";
 
 const About = () => {
   const qualities = [
@@ -29,28 +30,27 @@ const About = () => {
     <section id="o-mne" className="py-20 md:py-28 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left column - Image placeholder with decorative elements */}
+          {/* Left column - Photo */}
           <div className="relative">
-            <div className="aspect-square max-w-md mx-auto lg:mx-0 relative">
+            <div className="max-w-md mx-auto lg:mx-0 relative">
               {/* Decorative background */}
-              <div className="absolute inset-0 bg-hero-gradient rounded-3xl transform rotate-3 opacity-20" />
-              <div className="absolute inset-0 bg-accent rounded-3xl transform -rotate-3 opacity-10" />
+              <div className="absolute -inset-4 bg-hero-gradient rounded-3xl transform rotate-3 opacity-20" />
+              <div className="absolute -inset-4 bg-accent rounded-3xl transform -rotate-3 opacity-10" />
               
-              {/* Main content area */}
-              <div className="relative bg-card rounded-3xl p-8 shadow-xl border border-border h-full flex flex-col justify-center">
-                <div className="text-center">
+              {/* Photo */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src={miroslavDanko} 
+                  alt="Miroslav Danko - Instalatér" 
+                  className="w-full h-auto"
+                />
+                {/* Logo badge */}
+                <div className="absolute bottom-4 right-4 bg-primary rounded-lg p-2 shadow-lg">
                   <img 
                     src={dankoLogo} 
                     alt="Danko VTP" 
-                    className="h-24 md:h-32 w-auto mx-auto mb-6"
+                    className="h-8 w-auto"
                   />
-                  <h3 className="font-serif text-3xl font-bold text-foreground mb-2">
-                    Miroslav Danko
-                  </h3>
-                  <p className="text-accent font-semibold mb-4">Instalatér</p>
-                  <p className="text-muted-foreground">
-                    Jeden z nejkvalitnějších a nejspolehlivějších instalatérů v Brně
-                  </p>
                 </div>
               </div>
             </div>
