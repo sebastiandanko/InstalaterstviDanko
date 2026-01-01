@@ -16,8 +16,8 @@ const Header = () => {
               />
             </div>
             <div className="hidden sm:block">
-              <h1 className="font-serif font-bold text-foreground text-lg md:text-xl">Miroslav Danko</h1>
-              <p className="text-xs text-muted-foreground">Instalatérské práce</p>
+              <h1 className="font-medium text-foreground/80 text-sm md:text-base">Miroslav Danko</h1>
+              <p className="text-xs text-muted-foreground/70">Instalatérské práce</p>
             </div>
           </a>
 
