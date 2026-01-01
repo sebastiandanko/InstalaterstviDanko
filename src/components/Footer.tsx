@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-import dankoLogo from "@/assets/danko-logo.jpg";
+import dankoLogo from "@/assets/danko-logo.png";
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
               <img 
                 src={dankoLogo} 
                 alt="Danko VTP" 
-                className="h-12 w-auto brightness-0 invert"
+                className="h-12 w-auto"
               />
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
