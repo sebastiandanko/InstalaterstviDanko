@@ -1,4 +1,5 @@
 import { Award, Clock, ThumbsUp, Shield } from "lucide-react";
+import dankoLogo from "@/assets/danko-logo.jpg";
 
 const About = () => {
   const qualities = [
@@ -38,9 +39,11 @@ const About = () => {
               {/* Main content area */}
               <div className="relative bg-card rounded-3xl p-8 shadow-xl border border-border h-full flex flex-col justify-center">
                 <div className="text-center">
-                  <div className="w-32 h-32 mx-auto rounded-full bg-hero-gradient flex items-center justify-center mb-6 shadow-hero">
-                    <span className="text-primary-foreground font-serif font-bold text-5xl">MD</span>
-                  </div>
+                  <img 
+                    src={dankoLogo} 
+                    alt="Danko VTP" 
+                    className="h-24 md:h-32 w-auto mx-auto mb-6"
+                  />
                   <h3 className="font-serif text-3xl font-bold text-foreground mb-2">
                     Miroslav Danko
                   </h3>
