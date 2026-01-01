@@ -40,7 +40,7 @@ const Header = () => {
             className="flex items-center gap-2 bg-hero-gradient text-primary-foreground px-4 py-2.5 md:px-6 md:py-3 rounded-full font-semibold shadow-hero hover:opacity-90 transition-opacity"
           >
             <Phone className="w-4 h-4 md:w-5 md:h-5" />
-            <span className="text-sm md:text-base">+420 604 852 317</span>
+            <span className="text-sm md:text-base">604 852 317</span>
           </a>
         </div>
       </div>
