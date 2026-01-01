@@ -1,7 +1,10 @@
-import { Phone } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
+import { useState } from "react";
 import dankoLogo from "@/assets/danko-logo.png";
 
 const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
@@ -34,15 +37,55 @@ const Header = () => {
             </a>
           </nav>
 
-          {/* Phone CTA */}
-          <a
-            href="tel:+420604852317"
-            className="flex items-center gap-2 bg-hero-gradient text-primary-foreground px-4 py-2.5 md:px-6 md:py-3 rounded-full font-semibold shadow-hero hover:opacity-90 transition-opacity"
-          >
-            <Phone className="w-4 h-4 md:w-5 md:h-5" />
-            <span className="text-sm md:text-base">604 852 317</span>
-          </a>
+          <div className="flex items-center gap-3">
+            {/* Phone CTA */}
+            <a
+              href="tel:604852317"
+              className="flex items-center gap-2 bg-hero-gradient text-primary-foreground px-4 py-2.5 md:px-6 md:py-3 rounded-full font-semibold shadow-hero hover:opacity-90 transition-opacity"
+            >
+              <Phone className="w-4 h-4 md:w-5 md:h-5" />
+              <span className="text-sm md:text-base">604 852 317</span>
+            </a>
+
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 text-foreground/80 hover:text-primary transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <nav className="md:hidden py-4 border-t border-border">
+            <div className="flex flex-col gap-2">
+              <a 
+                href="#sluzby" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-foreground/80 hover:text-primary transition-colors font-medium py-3 px-2 rounded-lg hover:bg-muted/50"
+              >
+                Služby
+              </a>
+              <a 
+                href="#o-mne" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-foreground/80 hover:text-primary transition-colors font-medium py-3 px-2 rounded-lg hover:bg-muted/50"
+              >
+                O mně
+              </a>
+              <a 
+                href="#kontakt" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-foreground/80 hover:text-primary transition-colors font-medium py-3 px-2 rounded-lg hover:bg-muted/50"
+              >
+                Kontakt
+              </a>
+            </div>
+          </nav>
+        )}
       </div>
     </header>
   );
