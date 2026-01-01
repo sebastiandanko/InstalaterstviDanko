@@ -6,14 +6,18 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo in blue square */}
-          <a href="#" className="flex items-center">
+          {/* Logo in blue square with text */}
+          <a href="#" className="flex items-center gap-3">
             <div className="bg-primary rounded-lg p-2">
               <img 
                 src={dankoLogo} 
                 alt="Danko VTP - Instalatérské práce" 
                 className="h-8 md:h-10 w-auto"
               />
+            </div>
+            <div className="hidden sm:block">
+              <h1 className="font-serif font-bold text-foreground text-lg md:text-xl">Miroslav Danko</h1>
+              <p className="text-xs text-muted-foreground">Instalatérské práce</p>
             </div>
           </a>
 
@@ -32,11 +36,11 @@ const Header = () => {
 
           {/* Phone CTA */}
           <a
-            href="tel:604852317"
+            href="tel:+420604852317"
             className="flex items-center gap-2 bg-hero-gradient text-primary-foreground px-4 py-2.5 md:px-6 md:py-3 rounded-full font-semibold shadow-hero hover:opacity-90 transition-opacity"
           >
             <Phone className="w-4 h-4 md:w-5 md:h-5" />
-            <span className="text-sm md:text-base">604 852 317</span>
+            <span className="text-sm md:text-base">+420 604 852 317</span>
           </a>
         </div>
       </div>
